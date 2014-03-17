@@ -7,16 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C932448018D6C6EC00FD3BDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C932447F18D6C6EC00FD3BDE /* Foundation.framework */; };
-		C932448218D6C6EC00FD3BDE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C932448118D6C6EC00FD3BDE /* CoreGraphics.framework */; };
-		C932448418D6C6EC00FD3BDE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C932448318D6C6EC00FD3BDE /* UIKit.framework */; };
 		C932448A18D6C6EC00FD3BDE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C932448818D6C6EC00FD3BDE /* InfoPlist.strings */; };
 		C932448C18D6C6EC00FD3BDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C932448B18D6C6EC00FD3BDE /* main.m */; };
 		C932449018D6C6EC00FD3BDE /* PPPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C932448F18D6C6EC00FD3BDE /* PPPAppDelegate.m */; };
 		C932449218D6C6EC00FD3BDE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C932449118D6C6EC00FD3BDE /* Images.xcassets */; };
-		C932449918D6C6EC00FD3BDE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C932449818D6C6EC00FD3BDE /* XCTest.framework */; };
-		C932449A18D6C6EC00FD3BDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C932447F18D6C6EC00FD3BDE /* Foundation.framework */; };
-		C932449B18D6C6EC00FD3BDE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C932448318D6C6EC00FD3BDE /* UIKit.framework */; };
 		C93244A318D6C6EC00FD3BDE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C93244A118D6C6EC00FD3BDE /* InfoPlist.strings */; };
 		C93244A518D6C6EC00FD3BDE /* PaperPlaneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C93244A418D6C6EC00FD3BDE /* PaperPlaneTests.m */; };
 /* End PBXBuildFile section */
@@ -33,9 +27,6 @@
 
 /* Begin PBXFileReference section */
 		C932447C18D6C6EC00FD3BDE /* PaperPlane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperPlane.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C932447F18D6C6EC00FD3BDE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		C932448118D6C6EC00FD3BDE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C932448318D6C6EC00FD3BDE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C932448718D6C6EC00FD3BDE /* PaperPlane-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PaperPlane-Info.plist"; sourceTree = "<group>"; };
 		C932448918D6C6EC00FD3BDE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C932448B18D6C6EC00FD3BDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -44,7 +35,6 @@
 		C932448F18D6C6EC00FD3BDE /* PPPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPPAppDelegate.m; sourceTree = "<group>"; };
 		C932449118D6C6EC00FD3BDE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C932449718D6C6EC00FD3BDE /* PaperPlaneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaperPlaneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C932449818D6C6EC00FD3BDE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C93244A018D6C6EC00FD3BDE /* PaperPlaneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PaperPlaneTests-Info.plist"; sourceTree = "<group>"; };
 		C93244A218D6C6EC00FD3BDE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C93244A418D6C6EC00FD3BDE /* PaperPlaneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaperPlaneTests.m; sourceTree = "<group>"; };
@@ -55,9 +45,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C932448218D6C6EC00FD3BDE /* CoreGraphics.framework in Frameworks */,
-				C932448418D6C6EC00FD3BDE /* UIKit.framework in Frameworks */,
-				C932448018D6C6EC00FD3BDE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,9 +52,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C932449918D6C6EC00FD3BDE /* XCTest.framework in Frameworks */,
-				C932449B18D6C6EC00FD3BDE /* UIKit.framework in Frameworks */,
-				C932449A18D6C6EC00FD3BDE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +63,6 @@
 			children = (
 				C932448518D6C6EC00FD3BDE /* PaperPlane */,
 				C932449E18D6C6EC00FD3BDE /* PaperPlaneTests */,
-				C932447E18D6C6EC00FD3BDE /* Frameworks */,
 				C932447D18D6C6EC00FD3BDE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,17 +74,6 @@
 				C932449718D6C6EC00FD3BDE /* PaperPlaneTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		C932447E18D6C6EC00FD3BDE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C932447F18D6C6EC00FD3BDE /* Foundation.framework */,
-				C932448118D6C6EC00FD3BDE /* CoreGraphics.framework */,
-				C932448318D6C6EC00FD3BDE /* UIKit.framework */,
-				C932449818D6C6EC00FD3BDE /* XCTest.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		C932448518D6C6EC00FD3BDE /* PaperPlane */ = {
@@ -438,6 +410,7 @@
 				C93244AA18D6C6EC00FD3BDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C93244AB18D6C6EC00FD3BDE /* Build configuration list for PBXNativeTarget "PaperPlaneTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +419,7 @@
 				C93244AD18D6C6EC00FD3BDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
