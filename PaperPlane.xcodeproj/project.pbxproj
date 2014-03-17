@@ -73,9 +73,8 @@
 		C932448518D6C6EC00FD3BDE /* PaperPlane */ = {
 			isa = PBXGroup;
 			children = (
-				C932448E18D6C6EC00FD3BDE /* PPPAppDelegate.h */,
-				C932448F18D6C6EC00FD3BDE /* PPPAppDelegate.m */,
-				C932449118D6C6EC00FD3BDE /* Images.xcassets */,
+				C9EB386718D6CCC300644E0A /* Source */,
+				C9EB386618D6CAEE00644E0A /* Assets */,
 				C932448618D6C6EC00FD3BDE /* Supporting Files */,
 			);
 			path = PaperPlane;
@@ -84,8 +83,8 @@
 		C932448618D6C6EC00FD3BDE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C932448718D6C6EC00FD3BDE /* PaperPlane-Info.plist */,
 				C932448B18D6C6EC00FD3BDE /* main.m */,
+				C932448718D6C6EC00FD3BDE /* PaperPlane-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -96,6 +95,23 @@
 				C93244A418D6C6EC00FD3BDE /* PaperPlaneTests.m */,
 			);
 			path = PaperPlaneTests;
+			sourceTree = "<group>";
+		};
+		C9EB386618D6CAEE00644E0A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C932449118D6C6EC00FD3BDE /* Images.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		C9EB386718D6CCC300644E0A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C932448E18D6C6EC00FD3BDE /* PPPAppDelegate.h */,
+				C932448F18D6C6EC00FD3BDE /* PPPAppDelegate.m */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
