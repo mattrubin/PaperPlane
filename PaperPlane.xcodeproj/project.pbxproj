@@ -11,7 +11,6 @@
 		C932448C18D6C6EC00FD3BDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C932448B18D6C6EC00FD3BDE /* main.m */; };
 		C932449018D6C6EC00FD3BDE /* PPPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C932448F18D6C6EC00FD3BDE /* PPPAppDelegate.m */; };
 		C932449218D6C6EC00FD3BDE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C932449118D6C6EC00FD3BDE /* Images.xcassets */; };
-		C93244A318D6C6EC00FD3BDE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C93244A118D6C6EC00FD3BDE /* InfoPlist.strings */; };
 		C93244A518D6C6EC00FD3BDE /* PaperPlaneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C93244A418D6C6EC00FD3BDE /* PaperPlaneTests.m */; };
 /* End PBXBuildFile section */
 
@@ -35,8 +34,6 @@
 		C932448F18D6C6EC00FD3BDE /* PPPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPPAppDelegate.m; sourceTree = "<group>"; };
 		C932449118D6C6EC00FD3BDE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C932449718D6C6EC00FD3BDE /* PaperPlaneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaperPlaneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C93244A018D6C6EC00FD3BDE /* PaperPlaneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PaperPlaneTests-Info.plist"; sourceTree = "<group>"; };
-		C93244A218D6C6EC00FD3BDE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C93244A418D6C6EC00FD3BDE /* PaperPlaneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaperPlaneTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,18 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				C93244A418D6C6EC00FD3BDE /* PaperPlaneTests.m */,
-				C932449F18D6C6EC00FD3BDE /* Supporting Files */,
 			);
 			path = PaperPlaneTests;
-			sourceTree = "<group>";
-		};
-		C932449F18D6C6EC00FD3BDE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C93244A018D6C6EC00FD3BDE /* PaperPlaneTests-Info.plist */,
-				C93244A118D6C6EC00FD3BDE /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,7 +188,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C93244A318D6C6EC00FD3BDE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,14 +226,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				C932448918D6C6EC00FD3BDE /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		C93244A118D6C6EC00FD3BDE /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C93244A218D6C6EC00FD3BDE /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -360,13 +338,6 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PaperPlane/PaperPlane-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "PaperPlaneTests/PaperPlaneTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -382,9 +353,6 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PaperPlane/PaperPlane-Prefix.pch";
-				INFOPLIST_FILE = "PaperPlaneTests/PaperPlaneTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
