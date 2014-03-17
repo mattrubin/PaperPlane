@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C932448A18D6C6EC00FD3BDE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C932448818D6C6EC00FD3BDE /* InfoPlist.strings */; };
 		C932448C18D6C6EC00FD3BDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C932448B18D6C6EC00FD3BDE /* main.m */; };
 		C932449018D6C6EC00FD3BDE /* PPPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C932448F18D6C6EC00FD3BDE /* PPPAppDelegate.m */; };
 		C932449218D6C6EC00FD3BDE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C932449118D6C6EC00FD3BDE /* Images.xcassets */; };
@@ -27,9 +26,7 @@
 /* Begin PBXFileReference section */
 		C932447C18D6C6EC00FD3BDE /* PaperPlane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperPlane.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C932448718D6C6EC00FD3BDE /* PaperPlane-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PaperPlane-Info.plist"; sourceTree = "<group>"; };
-		C932448918D6C6EC00FD3BDE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C932448B18D6C6EC00FD3BDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C932448D18D6C6EC00FD3BDE /* PaperPlane-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PaperPlane-Prefix.pch"; sourceTree = "<group>"; };
 		C932448E18D6C6EC00FD3BDE /* PPPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPPAppDelegate.h; sourceTree = "<group>"; };
 		C932448F18D6C6EC00FD3BDE /* PPPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPPAppDelegate.m; sourceTree = "<group>"; };
 		C932449118D6C6EC00FD3BDE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -88,9 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				C932448718D6C6EC00FD3BDE /* PaperPlane-Info.plist */,
-				C932448818D6C6EC00FD3BDE /* InfoPlist.strings */,
 				C932448B18D6C6EC00FD3BDE /* main.m */,
-				C932448D18D6C6EC00FD3BDE /* PaperPlane-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -179,7 +174,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C932448A18D6C6EC00FD3BDE /* InfoPlist.strings in Resources */,
 				C932449218D6C6EC00FD3BDE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,17 +214,6 @@
 			targetProxy = C932449C18D6C6EC00FD3BDE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		C932448818D6C6EC00FD3BDE /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C932448918D6C6EC00FD3BDE /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C93244A618D6C6EC00FD3BDE /* Debug */ = {
@@ -309,7 +292,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PaperPlane/PaperPlane-Prefix.pch";
 				INFOPLIST_FILE = "PaperPlane/PaperPlane-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -322,7 +304,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PaperPlane/PaperPlane-Prefix.pch";
 				INFOPLIST_FILE = "PaperPlane/PaperPlane-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
