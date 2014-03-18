@@ -24,13 +24,16 @@
 //
 
 #import "PPPMessageTableViewController.h"
+#import "PPPConversation.h"
 #import "PPPMessage.h"
+
 
 @interface PPPMessageTableViewController ()
 
-@property (nonatomic, strong) NSMutableArray *messages;
+@property (nonatomic, strong) PPPConversation *conversation;
 
 @end
+
 
 @implementation PPPMessageTableViewController
 
@@ -38,7 +41,8 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        self.messages = [NSMutableArray arrayWithObject:[PPPMessage new]];
+        self.conversation = [PPPConversation new];
+        [self.conversation sendMessage:[PPPMessage new]];
     }
     return self;
 }
@@ -65,7 +69,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.messages.count;
+    return self.conversation.messages.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -73,7 +77,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Message Cell" forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", self.messages[indexPath.row]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", self.conversation.messages[indexPath.row]];
     
     return cell;
 }

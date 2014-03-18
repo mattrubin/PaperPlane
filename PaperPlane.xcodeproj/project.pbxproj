@@ -13,6 +13,7 @@
 		C93244A518D6C6EC00FD3BDE /* PaperPlaneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C93244A418D6C6EC00FD3BDE /* PaperPlaneTests.m */; };
 		C9DEABA218D82B5B0092B1D4 /* PPPMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DEABA118D82B5B0092B1D4 /* PPPMessageTableViewController.m */; };
 		C9DEABA518D82C530092B1D4 /* PPPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DEABA418D82C530092B1D4 /* PPPMessage.m */; };
+		C9DEABA918D82EE10092B1D4 /* PPPConversation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DEABA818D82EE10092B1D4 /* PPPConversation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		C9DEABA118D82B5B0092B1D4 /* PPPMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPMessageTableViewController.m; sourceTree = "<group>"; };
 		C9DEABA318D82C530092B1D4 /* PPPMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPMessage.h; sourceTree = "<group>"; };
 		C9DEABA418D82C530092B1D4 /* PPPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPMessage.m; sourceTree = "<group>"; };
+		C9DEABA718D82EE10092B1D4 /* PPPConversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPConversation.h; sourceTree = "<group>"; };
+		C9DEABA818D82EE10092B1D4 /* PPPConversation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPConversation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,17 @@
 			path = PaperPlaneTests;
 			sourceTree = "<group>";
 		};
+		C9DEABA618D82EC50092B1D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9DEABA318D82C530092B1D4 /* PPPMessage.h */,
+				C9DEABA418D82C530092B1D4 /* PPPMessage.m */,
+				C9DEABA718D82EE10092B1D4 /* PPPConversation.h */,
+				C9DEABA818D82EE10092B1D4 /* PPPConversation.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		C9EB386618D6CAEE00644E0A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,8 +132,7 @@
 				C932448F18D6C6EC00FD3BDE /* PPPAppDelegate.m */,
 				C9DEABA018D82B5B0092B1D4 /* PPPMessageTableViewController.h */,
 				C9DEABA118D82B5B0092B1D4 /* PPPMessageTableViewController.m */,
-				C9DEABA318D82C530092B1D4 /* PPPMessage.h */,
-				C9DEABA418D82C530092B1D4 /* PPPMessage.m */,
+				C9DEABA618D82EC50092B1D4 /* Model */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -221,6 +234,7 @@
 				C9DEABA518D82C530092B1D4 /* PPPMessage.m in Sources */,
 				C9DEABA218D82B5B0092B1D4 /* PPPMessageTableViewController.m in Sources */,
 				C932448C18D6C6EC00FD3BDE /* main.m in Sources */,
+				C9DEABA918D82EE10092B1D4 /* PPPConversation.m in Sources */,
 				C932449018D6C6EC00FD3BDE /* PPPAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
