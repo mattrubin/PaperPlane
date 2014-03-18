@@ -52,6 +52,7 @@
 - (void)sendMessage:(PPPMessage *)message
 {
     [self.mutableMessages addObject:message];
+    [self.delegate conversation:self didAddMessage:message];
 }
 
 @end

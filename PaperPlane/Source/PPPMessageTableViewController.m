@@ -28,7 +28,7 @@
 #import "PPPMessage.h"
 
 
-@interface PPPMessageTableViewController ()
+@interface PPPMessageTableViewController () <PPPConversationDelegate>
 
 @property (nonatomic, strong) PPPConversation *conversation;
 
@@ -42,6 +42,7 @@
     self = [super initWithStyle:style];
     if (self) {
         self.conversation = [PPPConversation new];
+        self.conversation.delegate = self;
         [self.conversation sendMessage:[PPPMessage messageWithText:@"Hello!"]];
     }
     return self;
@@ -52,6 +53,11 @@
     [super viewDidLoad];
 
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Message Cell"];
+
+    // Pretend a new message comes in after five seconds
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.conversation sendMessage:[PPPMessage messageWithText:@"Goodbye!"]];
+    });
 }
 
 - (void)didReceiveMemoryWarning
@@ -80,6 +86,16 @@
     cell.textLabel.text = [NSString stringWithFormat:@"%@", message.text];
     
     return cell;
+}
+
+
+#pragma mark - Conversation delegate
+
+- (void)conversation:(PPPConversation *)conversation didAddMessage:(PPPMessage *)message
+{
+    [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:(conversation.messages.count - 1)
+                                                                inSection:0]]
+                          withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 @end
