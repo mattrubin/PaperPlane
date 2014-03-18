@@ -42,7 +42,7 @@
     self = [super initWithStyle:style];
     if (self) {
         self.conversation = [PPPConversation new];
-        [self.conversation sendMessage:[PPPMessage new]];
+        [self.conversation sendMessage:[PPPMessage messageWithText:@"Hello!"]];
     }
     return self;
 }
@@ -76,8 +76,8 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Message Cell" forIndexPath:indexPath];
     
-    // Configure the cell...
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", self.conversation.messages[indexPath.row]];
+    PPPMessage *message = self.conversation.messages[indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", message.text];
     
     return cell;
 }

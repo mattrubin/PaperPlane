@@ -25,6 +25,11 @@
 
 @import Foundation;
 
+
 @interface PPPMessage : NSObject
+
+@property (nonatomic, copy) NSString *text;
+
++ (instancetype)messageWithText:(NSString *)text;
 
 @end

@@ -25,6 +25,14 @@
 
 #import "PPPMessage.h"
 
+
 @implementation PPPMessage
+
++ (instancetype)messageWithText:(NSString *)text
+{
+    PPPMessage *message = [self new];
+    message.text = text;
+    return message;
+}
 
 @end
