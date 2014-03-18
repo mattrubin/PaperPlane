@@ -12,6 +12,7 @@
 		C932449218D6C6EC00FD3BDE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C932449118D6C6EC00FD3BDE /* Images.xcassets */; };
 		C93244A518D6C6EC00FD3BDE /* PaperPlaneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C93244A418D6C6EC00FD3BDE /* PaperPlaneTests.m */; };
 		C9DEABA218D82B5B0092B1D4 /* PPPMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DEABA118D82B5B0092B1D4 /* PPPMessageTableViewController.m */; };
+		C9DEABA518D82C530092B1D4 /* PPPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DEABA418D82C530092B1D4 /* PPPMessage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,8 @@
 		C93244A418D6C6EC00FD3BDE /* PaperPlaneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaperPlaneTests.m; sourceTree = "<group>"; };
 		C9DEABA018D82B5B0092B1D4 /* PPPMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPMessageTableViewController.h; sourceTree = "<group>"; };
 		C9DEABA118D82B5B0092B1D4 /* PPPMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPMessageTableViewController.m; sourceTree = "<group>"; };
+		C9DEABA318D82C530092B1D4 /* PPPMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPMessage.h; sourceTree = "<group>"; };
+		C9DEABA418D82C530092B1D4 /* PPPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPMessage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				C932448F18D6C6EC00FD3BDE /* PPPAppDelegate.m */,
 				C9DEABA018D82B5B0092B1D4 /* PPPMessageTableViewController.h */,
 				C9DEABA118D82B5B0092B1D4 /* PPPMessageTableViewController.m */,
+				C9DEABA318D82C530092B1D4 /* PPPMessage.h */,
+				C9DEABA418D82C530092B1D4 /* PPPMessage.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9DEABA518D82C530092B1D4 /* PPPMessage.m in Sources */,
 				C9DEABA218D82B5B0092B1D4 /* PPPMessageTableViewController.m in Sources */,
 				C932448C18D6C6EC00FD3BDE /* main.m in Sources */,
 				C932449018D6C6EC00FD3BDE /* PPPAppDelegate.m in Sources */,
