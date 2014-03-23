@@ -1,5 +1,5 @@
 //
-//  PPPMessageTableViewController.m
+//  PPPConversationViewController.h
 //  PaperPlane
 //
 //  Copyright (c) 2014 Matt Rubin
@@ -23,46 +23,12 @@
 //  SOFTWARE.
 //
 
-#import "PPPMessageTableViewController.h"
-#import "PPPConversation.h"
-#import "PPPMessage.h"
+@import UIKit;
+@class PPPConversation;
 
 
-@implementation PPPMessageTableViewController
+@interface PPPConversationViewController : UIViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Message Cell"];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return self.conversation.messages.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Message Cell" forIndexPath:indexPath];
-    
-    PPPMessage *message = self.conversation.messages[indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", message.text];
-    
-    return cell;
-}
+@property (nonatomic, strong) PPPConversation *conversation;
 
 @end

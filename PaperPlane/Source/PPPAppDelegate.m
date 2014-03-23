@@ -24,7 +24,9 @@
 //
 
 #import "PPPAppDelegate.h"
-#import "PPPMessageTableViewController.h"
+#import "PPPConversation.h"
+#import "PPPMessage.h"
+#import "PPPConversationViewController.h"
 
 @implementation PPPAppDelegate
 
@@ -32,7 +34,11 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-    self.window.rootViewController = [PPPMessageTableViewController new];
+    PPPConversationViewController *cvc = [PPPConversationViewController new];
+    cvc.conversation = [PPPConversation new];
+    [cvc.conversation sendMessage:[PPPMessage messageWithText:@"Hello!"]];
+    [cvc.conversation sendMessage:[PPPMessage messageWithText:@"Hi!"]];
+    self.window.rootViewController = cvc;
 
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

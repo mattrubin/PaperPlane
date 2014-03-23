@@ -24,7 +24,11 @@
 //
 
 @import UIKit;
+@class PPPConversation;
+
 
 @interface PPPMessageTableViewController : UITableViewController
+
+@property (nonatomic, strong) PPPConversation *conversation;
 
 @end

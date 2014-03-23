@@ -1,5 +1,5 @@
 //
-//  PPPMessageTableViewController.m
+//  PPPConversationViewController.m
 //  PaperPlane
 //
 //  Copyright (c) 2014 Matt Rubin
@@ -23,18 +23,33 @@
 //  SOFTWARE.
 //
 
+#import "PPPConversationViewController.h"
 #import "PPPMessageTableViewController.h"
-#import "PPPConversation.h"
-#import "PPPMessage.h"
 
 
-@implementation PPPMessageTableViewController
+@interface PPPConversationViewController ()
+
+@property (nonatomic, strong) PPPMessageTableViewController *messageTableViewController;
+
+@end
+
+
+@implementation PPPConversationViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        _messageTableViewController = [PPPMessageTableViewController new];
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Message Cell"];
+    [self.view addSubview:self.messageTableViewController.view];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,26 +58,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
+#pragma mark - Conversation
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (void)setConversation:(PPPConversation *)conversation
 {
-    return self.conversation.messages.count;
-}
+    if (_conversation != conversation) {
+        _conversation = conversation;
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Message Cell" forIndexPath:indexPath];
-    
-    PPPMessage *message = self.conversation.messages[indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", message.text];
-    
-    return cell;
+        self.messageTableViewController.conversation = conversation;
+    }
 }
 
 @end

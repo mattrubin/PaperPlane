@@ -11,6 +11,7 @@
 		C932449018D6C6EC00FD3BDE /* PPPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C932448F18D6C6EC00FD3BDE /* PPPAppDelegate.m */; };
 		C932449218D6C6EC00FD3BDE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C932449118D6C6EC00FD3BDE /* Images.xcassets */; };
 		C93244A518D6C6EC00FD3BDE /* PaperPlaneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C93244A418D6C6EC00FD3BDE /* PaperPlaneTests.m */; };
+		C95B622418DA2199000C0058 /* PPPConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C95B622318DA2199000C0058 /* PPPConversationViewController.m */; };
 		C9DEABA218D82B5B0092B1D4 /* PPPMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DEABA118D82B5B0092B1D4 /* PPPMessageTableViewController.m */; };
 		C9DEABA518D82C530092B1D4 /* PPPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DEABA418D82C530092B1D4 /* PPPMessage.m */; };
 		C9DEABA918D82EE10092B1D4 /* PPPConversation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DEABA818D82EE10092B1D4 /* PPPConversation.m */; };
@@ -35,6 +36,8 @@
 		C932449118D6C6EC00FD3BDE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C932449718D6C6EC00FD3BDE /* PaperPlaneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaperPlaneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93244A418D6C6EC00FD3BDE /* PaperPlaneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaperPlaneTests.m; sourceTree = "<group>"; };
+		C95B622218DA2199000C0058 /* PPPConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPConversationViewController.h; sourceTree = "<group>"; };
+		C95B622318DA2199000C0058 /* PPPConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPConversationViewController.m; sourceTree = "<group>"; };
 		C9DEABA018D82B5B0092B1D4 /* PPPMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPMessageTableViewController.h; sourceTree = "<group>"; };
 		C9DEABA118D82B5B0092B1D4 /* PPPMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPMessageTableViewController.m; sourceTree = "<group>"; };
 		C9DEABA318D82C530092B1D4 /* PPPMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPMessage.h; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 			children = (
 				C932448E18D6C6EC00FD3BDE /* PPPAppDelegate.h */,
 				C932448F18D6C6EC00FD3BDE /* PPPAppDelegate.m */,
+				C95B622218DA2199000C0058 /* PPPConversationViewController.h */,
+				C95B622318DA2199000C0058 /* PPPConversationViewController.m */,
 				C9DEABA018D82B5B0092B1D4 /* PPPMessageTableViewController.h */,
 				C9DEABA118D82B5B0092B1D4 /* PPPMessageTableViewController.m */,
 				C9DEABA618D82EC50092B1D4 /* Model */,
@@ -231,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C95B622418DA2199000C0058 /* PPPConversationViewController.m in Sources */,
 				C9DEABA518D82C530092B1D4 /* PPPMessage.m in Sources */,
 				C9DEABA218D82B5B0092B1D4 /* PPPMessageTableViewController.m in Sources */,
 				C932448C18D6C6EC00FD3BDE /* main.m in Sources */,
