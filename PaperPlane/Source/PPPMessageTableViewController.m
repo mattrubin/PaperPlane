@@ -65,4 +65,27 @@
     return cell;
 }
 
+
+#pragma mark - Conversation
+
+- (void)setConversation:(PPPConversation *)conversation
+{
+    if (_conversation != conversation) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                        name:PPPConversationDidAddMessageNotification
+                                                      object:_conversation];
+        _conversation = conversation;
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(conversationDidAddMessage)
+                                                     name:PPPConversationDidAddMessageNotification
+                                                   object:_conversation];
+    }
+}
+
+- (void)conversationDidAddMessage
+{
+    // TODO: more granular update
+    [self.tableView reloadData];
+}
+
 @end

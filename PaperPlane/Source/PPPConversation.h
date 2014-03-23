@@ -27,21 +27,13 @@
 @class PPPMessage;
 
 
-@protocol PPPConversationDelegate;
+extern NSString * const PPPConversationDidAddMessageNotification;
 
 
 @interface PPPConversation : NSObject
 
-@property (nonatomic, weak) id <PPPConversationDelegate> delegate;
 @property (nonatomic, readonly) NSArray *messages;
 
 - (void)sendMessage:(PPPMessage *)message;
-
-@end
-
-
-@protocol PPPConversationDelegate <NSObject>
-
-- (void)conversation:(PPPConversation *)conversation didAddMessage:(PPPMessage *)message;
 
 @end

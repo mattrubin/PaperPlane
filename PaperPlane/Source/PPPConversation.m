@@ -26,6 +26,9 @@
 #import "PPPConversation.h"
 
 
+NSString * const PPPConversationDidAddMessageNotification = @"PPPConversationDidAddMessageNotification";
+
+
 @interface PPPConversation ()
 
 @property (nonatomic, strong) NSMutableArray *mutableMessages;
@@ -52,7 +55,8 @@
 - (void)sendMessage:(PPPMessage *)message
 {
     [self.mutableMessages addObject:message];
-    [self.delegate conversation:self didAddMessage:message];
+    [[NSNotificationCenter defaultCenter] postNotificationName:PPPConversationDidAddMessageNotification
+                                                        object:self];
 }
 
 @end
