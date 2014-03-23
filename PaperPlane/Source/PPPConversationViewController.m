@@ -71,10 +71,24 @@
 - (void)setConversation:(PPPConversation *)conversation
 {
     if (_conversation != conversation) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                        name:PPPConversationDidAddMessageNotification
+                                                      object:_conversation];
         _conversation = conversation;
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(updateTitle)
+                                                     name:PPPConversationDidAddMessageNotification
+                                                   object:_conversation];
 
         self.messageTableViewController.conversation = conversation;
+
+        [self updateTitle];
     }
+}
+
+- (void)updateTitle
+{
+    self.title = [NSString stringWithFormat:@"%lu messages", (unsigned long)self.conversation.messages.count];
 }
 
 - (void)addMessage
