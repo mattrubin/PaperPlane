@@ -25,6 +25,8 @@
 
 #import "PPPConversationViewController.h"
 #import "PPPMessageTableViewController.h"
+#import "PPPConversation.h"
+#import "PPPMessage.h"
 
 
 @interface PPPConversationViewController ()
@@ -49,7 +51,12 @@
 {
     [super viewDidLoad];
 
+    [self addChildViewController:self.messageTableViewController];
     [self.view addSubview:self.messageTableViewController.view];
+    self.messageTableViewController.view.frame = self.view.bounds;
+    [self.messageTableViewController didMoveToParentViewController:self];
+
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addMessage)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -68,6 +75,11 @@
 
         self.messageTableViewController.conversation = conversation;
     }
+}
+
+- (void)addMessage
+{
+    [self.conversation sendMessage:[PPPMessage messageWithText:@"New message!"]];
 }
 
 @end

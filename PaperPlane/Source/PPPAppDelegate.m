@@ -38,7 +38,9 @@
     cvc.conversation = [PPPConversation new];
     [cvc.conversation sendMessage:[PPPMessage messageWithText:@"Hello!"]];
     [cvc.conversation sendMessage:[PPPMessage messageWithText:@"Hi!"]];
-    self.window.rootViewController = cvc;
+
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:cvc];
+    self.window.rootViewController = navController;
 
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
