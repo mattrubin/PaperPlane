@@ -28,13 +28,23 @@
 #import "PPPMessage.h"
 
 
+@interface PPPMessageTableViewController () <UICollectionViewDelegateFlowLayout>
+
+@end
+
+
 @implementation PPPMessageTableViewController
+
+- (instancetype)init
+{
+    return [self initWithCollectionViewLayout:[UICollectionViewFlowLayout new]];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Message Cell"];
+    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"Message Cell"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,26 +53,33 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+#pragma mark - UICollectionViewDataSource
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return self.conversation.messages.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Message Cell" forIndexPath:indexPath];
-    
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Message Cell" forIndexPath:indexPath];
+
+//    cell.frame = CGRectMake(0, 0, 100, 100);
+    cell.backgroundColor = [UIColor redColor];
     PPPMessage *message = self.conversation.messages[indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", message.text];
-    
+//    cell.textLabel.text = [NSString stringWithFormat:@"%@", message.text];
+
     return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(CGRectGetWidth(self.view.bounds), 50);
 }
 
 
@@ -85,7 +102,7 @@
 - (void)conversationDidAddMessage
 {
     // TODO: more granular update
-    [self.tableView reloadData];
+    [self.collectionView reloadData];
 }
 
 @end

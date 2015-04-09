@@ -27,7 +27,7 @@
 @class PPPConversation;
 
 
-@interface PPPMessageTableViewController : UITableViewController
+@interface PPPMessageTableViewController : UICollectionViewController
 
 @property (nonatomic, strong) PPPConversation *conversation;
 
